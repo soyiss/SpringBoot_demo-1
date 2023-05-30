@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<!--모델값을 꺼내서 쓰려면 타임리프 문법을 써야된다-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<!--스프링 부트에선 안통하는 문법이다-->
+<p>${param1}</p>
+
+<!--대괄호를 써야됨(잘 쓰진 않음)-->
+<p>[[${param1}]]</p>
+
+<!--타임리프에서 파라미터값을 출력할때는 이방식을 가장 많이 쓴다 -->
+<!--기존 html태그에 속성이 추가되는 형식으로 쓴다(타임리프문법의 특징: 기존 html에 잘 녹아들어감)-->
+<p th:text="${param1}"></p>
+<h2 th:text="${param2}"></h2>
+</body>
+</html>

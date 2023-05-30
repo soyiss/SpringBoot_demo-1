@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--모델값을 꺼내서 쓰려면 타임리프 문법을 써야된다-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2>model2.html</h2>
+
+  <!-- p태그 안에 글을 써도 th문법은 innerhtml속성이기 때문에
+  처음에 써놨던 글에 덮어씌워져서 출력값은 th값이 나옴 -->
+  <p th:text="${nation.name}">나라이름</p>
+  <p th:text="${nation.capital}"></p>
+  <p th:text="${nation.population}"></p>
+</body>
+</html>
